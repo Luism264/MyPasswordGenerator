@@ -47,7 +47,7 @@ function selectCharacterTypes() {
   }
 
   // Option to include lowercase
-  var selectLowerCase = window.confirm("Would you like to include lowercase characters in your passwords?")
+  var selectLowerCase = window.confirm("Would you like to include LOWERCASE characters in your passwords?")
   console.log(selectLowerCase);
 
   if (selectLowerCase == true) {
@@ -57,7 +57,7 @@ function selectCharacterTypes() {
   }
 
   // Option for special characters
-  var selectSpecialCharacter = window.confirm("Would you like to include special characters in your password?")
+  var selectSpecialCharacter = window.confirm("Would you like to include SPECIAL characters in your password?")
   console.log(selectSpecialCharacter)
   if (selectSpecialCharacter == true) {
     selectionPool += allCharacters.slice(62,92);
@@ -68,7 +68,7 @@ function selectCharacterTypes() {
   
   
   // Option to include numbers
-  var selectNumber = window.confirm("Would you like to include numbers in your password?")
+  var selectNumber = window.confirm("Would you like to include NUMBERS in your password?")
   console.log(selectNumber);
 
   if (selectNumber == true) {
