@@ -14,7 +14,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 // Character types
-var allCharacters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#%$&*@^()\'+=,.-:<>?[]_{}|~';
+var allCharacters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#%$&*@^()\'+=,.-:<>?[]_{}^|~';
 
 // Retrieve user input for password length
 
@@ -56,6 +56,17 @@ function selectCharacterTypes() {
     console.log("lowercase " + selectLowerCase);
   }
 
+  // Option for special characters
+  var selectSpecialCharacter = window.confirm("Would you like to include special characters in your password?")
+  console.log(selectSpecialCharacter)
+  if (selectSpecialCharacter == true) {
+    selectionPool += allCharacters.slice(62,92);
+    console.log("special characters " + selectSpecialCharacter);
+  }
+  
+  
+  
+  
   // Option to include numbers
   var selectNumber = window.confirm("Would you like to include numbers in your password?")
   console.log(selectNumber);
@@ -105,12 +116,13 @@ function generatePassword() {
     };
 
     if (chosenCharacterPool.includes(allCharacters.slice(52, 62))) {
-      var index = randomNumber(62, 52)
+      var index = randomNumber(62, 52);
       password += allCharacters[index];
     };
 
-    if (chosenCharacterPool.includes(allCharacters.slice(62, 93))) {
-      var indez = randomNumber(93, 62);
+    if (chosenCharacterPool.includes(allCharacters.slice(62, 92))) {
+      var index = randomNumber(92, 62);
+      password += allCharacters[index];
     };
 
 
